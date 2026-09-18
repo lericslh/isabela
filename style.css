@@ -195,10 +195,6 @@ h1 em {
   transform: translateY(0);
 }
 
-.scene:not(.active) .reveal {
-  opacity: 0;
-  transform: translateY(28px);
-}
 
 .scene.active .reveal.visible:nth-child(2) { transition-delay: .08s; }
 .scene.active .reveal.visible:nth-child(3) { transition-delay: .16s; }
@@ -220,6 +216,8 @@ h1 em {
 .letter-card {
   position: relative;
   width: min(100%, 720px);
+  max-width: 100%;
+  flex-shrink: 0;
   padding: clamp(42px, 6vw, 70px) clamp(24px, 7vw, 68px);
   background: linear-gradient(150deg, rgba(32,20,27,.97), rgba(18,12,16,.98));
   border: 1px solid rgba(187,161,126,.2);
@@ -526,6 +524,20 @@ h1 em {
 }
 
 @media (max-width: 760px) {
+  #scene-letter {
+    align-items: flex-start;
+  }
+
+  #scene-letter .scene-inner {
+    width: 100%;
+    padding-top: 4px;
+  }
+
+  .letter-card {
+    width: 100%;
+    overflow: visible;
+  }
+
   .scene {
     min-height: 100svh;
     padding: 76px 18px;
@@ -613,5 +625,105 @@ h1 em {
     scroll-behavior: auto !important;
     animation: none !important;
     transition-duration: .01ms !important;
+  }
+}
+
+
+/* --- Dedicated layout for the long letter scene --- */
+/* The letter is taller than a phone viewport, so it must not be vertically centered
+   inside a fixed 100svh flex container. */
+#scene-letter {
+  min-height: auto;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: clamp(88px, 10vh, 125px);
+  padding-bottom: clamp(90px, 11vh, 135px);
+}
+
+#scene-letter .scene-inner {
+  width: min(100%, 760px);
+  min-width: 0;
+}
+
+#scene-letter .letter-card {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .85s cubic-bezier(.2,.7,.2,1),
+              transform .85s cubic-bezier(.2,.7,.2,1);
+}
+
+#scene-letter .letter-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#scene-letter .letter-text .reveal,
+#scene-letter .signature.reveal {
+  opacity: 1;
+  transform: none;
+}
+
+#scene-letter .letter-text p {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+#scene-letter .letter-card.visible .letter-text p {
+  animation: letterParagraphIn .7s cubic-bezier(.2,.7,.2,1) forwards;
+}
+
+#scene-letter .letter-card.visible .letter-text p:nth-child(1) { animation-delay: .20s; }
+#scene-letter .letter-card.visible .letter-text p:nth-child(2) { animation-delay: .34s; }
+#scene-letter .letter-card.visible .letter-text p:nth-child(3) { animation-delay: .48s; }
+#scene-letter .letter-card.visible .letter-text p:nth-child(4) { animation-delay: .62s; }
+#scene-letter .letter-card.visible .letter-text p:nth-child(5) { animation-delay: .76s; }
+#scene-letter .letter-card.visible .letter-text p:nth-child(6) { animation-delay: .90s; }
+#scene-letter .letter-card.visible .letter-text p:nth-child(7) { animation-delay: 1.04s; }
+#scene-letter .letter-card.visible .letter-text p:nth-child(8) { animation-delay: 1.18s; }
+#scene-letter .letter-card.visible .letter-text p:nth-child(9) { animation-delay: 1.32s; }
+#scene-letter .letter-card.visible .letter-text p:nth-child(10) { animation-delay: 1.46s; }
+
+#scene-letter .letter-card.visible .signature {
+  animation: letterParagraphIn .7s cubic-bezier(.2,.7,.2,1) 1.62s forwards;
+}
+
+@keyframes letterParagraphIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 760px) {
+  #scene-letter {
+    min-height: auto;
+    align-items: flex-start;
+    padding-top: 82px;
+    padding-bottom: 100px;
+  }
+
+  #scene-letter .scene-inner {
+    width: 100%;
+  }
+
+  #scene-letter .chapter-label {
+    margin-left: 3px;
+  }
+
+  #scene-letter .letter-card {
+    width: 100%;
+    padding: 44px 23px;
+    overflow: visible;
+  }
+}
+
+@media (max-width: 430px) {
+  #scene-letter {
+    padding-top: 72px;
+    padding-bottom: 90px;
+  }
+
+  #scene-letter .letter-card {
+    padding: 41px 21px;
   }
 }

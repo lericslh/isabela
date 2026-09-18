@@ -28,6 +28,7 @@ const revealObserver = new IntersectionObserver(
 );
 
 document.querySelectorAll(".reveal").forEach((element) => {
+  if (element.closest("#scene-letter")) return;
   revealObserver.observe(element);
 });
 
@@ -48,7 +49,7 @@ const sceneObserver = new IntersectionObserver(
       });
     });
   },
-  { threshold: 0.55 }
+  { threshold: 0.18, rootMargin: "0px 0px -12% 0px" }
 );
 
 scenes.forEach((scene) => sceneObserver.observe(scene));
@@ -57,3 +58,22 @@ scenes.forEach((scene) => sceneObserver.observe(scene));
 document.querySelector("#scene-intro")?.querySelectorAll(".reveal").forEach((el) => {
   requestAnimationFrame(() => el.classList.add("visible"));
 });
+
+// The letter has its own animation so it works reliably on mobile Safari too.
+const letterScene = document.getElementById("scene-letter");
+const letterCard = letterScene?.querySelector(".letter-card");
+
+if (letterCard) {
+  const letterObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        letterCard.classList.add("visible");
+        letterObserver.disconnect();
+      });
+    },
+    { threshold: 0.05, rootMargin: "0px 0px -4% 0px" }
+  );
+
+  letterObserver.observe(letterScene);
+}
