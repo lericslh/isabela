@@ -48,7 +48,7 @@ const sceneObserver = new IntersectionObserver(
       });
     });
   },
-  { threshold: 0.55 }
+  { threshold: 0.18, rootMargin: "0px 0px -12% 0px" }
 );
 
 scenes.forEach((scene) => sceneObserver.observe(scene));
@@ -57,3 +57,10 @@ scenes.forEach((scene) => sceneObserver.observe(scene));
 document.querySelector("#scene-intro")?.querySelectorAll(".reveal").forEach((el) => {
   requestAnimationFrame(() => el.classList.add("visible"));
 });
+
+// Safety fallback: make sure the letter card itself cannot remain hidden
+// on a mobile browser that delays IntersectionObserver notifications.
+const firstLetterCard = document.querySelector("#scene-letter .letter-card");
+if (firstLetterCard) {
+  setTimeout(() => firstLetterCard.classList.add("visible"), 1200);
+}
