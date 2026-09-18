@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#080609">
+  <meta name="description" content="Una carta para Anny.">
+  <title>Para Anny ♡</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="ambient" aria-hidden="true">
+    <div class="stars"></div>
+    <div class="vignette"></div>
+    <div class="grain"></div>
+  </div>
+
+  <main id="story">
+
+    <!-- SCENE 0 -->
+    <section class="scene scene-intro active" id="scene-intro" data-scene="0">
+      <div class="intro-content reveal">
+        <p class="eyebrow">UNA CARTA PARA TI</p>
+        <h1>Querida<br><em>Anny</em></h1>
+        <p class="subtitle">Hay cosas que merecen ser dichas despacio.</p>
+
+        <button class="primary-btn" data-next="scene-letter" type="button">
+          <span>♡</span> Abrir carta
+        </button>
+      </div>
+      <div class="scroll-hint">desliza</div>
+    </section>
+
+    <!-- SCENE 1 -->
+    <section class="scene" id="scene-letter" data-scene="1">
+      <div class="scene-inner">
+        <div class="chapter-label reveal">01 · CARTA</div>
+
+        <article class="letter-card reveal">
+          <div class="ornament">✦</div>
+          <p class="greeting">Querida Anny:</p>
+
+          <div class="letter-text">
+            <p class="reveal">Ha pasado mucho tiempo desde que te conocí.</p>
+
+            <p class="reveal">En todo este tiempo hemos compartido momentos agradables, momentos difíciles y otros que quizá ninguno de los dos habría imaginado vivir. Hemos cambiado, hemos aprendido y, de alguna manera, hemos ido dejando una parte de nosotros en la historia que compartimos.</p>
+
+            <p class="reveal">Sin embargo, creo que nuestra historia no tiene por qué quedar definida únicamente por lo que fue, ni tampoco por lo que algún día pueda llegar a ser.</p>
+
+            <p class="reveal">Hay algo que sí tengo claro:</p>
+
+            <p class="emphasis reveal">Te quiero.</p>
+
+            <p class="reveal">Y quiero que sepas que aprecié cada una de tus fases. La persona que conocí, la persona que fuiste después, la que eres ahora y todas aquellas versiones de ti que quizá todavía están por aparecer.</p>
+
+            <p class="reveal">No quiero quedarme solamente con los momentos bonitos ni olvidar los difíciles. Todo forma parte de lo que hemos vivido, y cada etapa me permitió conocerte un poco más.</p>
+
+            <p class="reveal">Quizá eso sea lo que más valoro de nuestra historia: que nunca fuiste una sola versión de ti.</p>
+
+            <p class="emphasis soft reveal">Fuiste muchas.</p>
+
+            <p class="reveal">Y tuve la oportunidad de conocerlas.</p>
+          </div>
+
+          <div class="signature reveal">
+            <span>Con cariño,</span>
+            <strong>♡</strong>
+          </div>
+        </article>
+
+        <button class="text-btn reveal" data-next="scene-2020" type="button">
+          Continuar <span>↓</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- SCENE 2 -->
+    <section class="scene scene-memory" id="scene-2020" data-scene="2">
+      <div class="memory-layout">
+        <div class="memory-copy reveal">
+          <span class="chapter-label">02 · FEBRERO 2020</span>
+          <h2>El comienzo.</h2>
+          <p>En febrero de 2020 te conocí. La historia comenzó de una manera curiosa, entre Leonardo DiCaprio y una influencer rusa llamada Tenderlybae.</p>
+          <p>En ese momento no podía saber todo lo que vendría después. Solo era el inicio de una historia que todavía no sabía que iba a recordar tantos años más tarde.</p>
+          <button class="text-btn" data-next="scene-2021" type="button">Siguiente capítulo <span>↓</span></button>
+        </div>
+
+        <figure class="memory-photo reveal">
+          <img src="assets/anny-momentos.jpg" alt="Collage de fotografías de Anny" loading="lazy">
+          <figcaption>Una persona, muchas versiones.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- SCENE 3 -->
+    <section class="scene scene-film" id="scene-2021" data-scene="3">
+      <div class="film-card reveal">
+        <span class="chapter-label">03 · 2021</span>
+        <p class="quote-mark">“</p>
+        <p class="film-intro">Me dijiste que tu película favorita era...</p>
+        <h2>Eterno resplandor<br>de una mente sin recuerdos</h2>
+        <p class="film-copy">Quizá en aquel momento no imaginabas que iba a guardar ese detalle. Pero algunas cosas pequeñas se quedan con nosotros mucho más de lo que esperamos.</p>
+        <button class="text-btn" data-next="scene-2025" type="button">Continuar <span>↓</span></button>
+      </div>
+    </section>
+
+    <!-- SCENE 4 -->
+    <section class="scene" id="scene-2025" data-scene="4">
+      <div class="memory-layout reverse">
+        <figure class="memory-photo portrait reveal">
+          <img src="assets/anny-vestido.jpeg" alt="Fotografía de Anny frente a un espejo" loading="lazy">
+          <figcaption>2025 · conocerte más profundamente.</figcaption>
+        </figure>
+
+        <div class="memory-copy reveal">
+          <span class="chapter-label">04 · 2025</span>
+          <h2>Conocerte de verdad.</h2>
+          <p>Fue en 2025 cuando sentí que empecé a conocerte mucho más profundamente: no solamente la persona que todos podían ver, sino también aquellas partes de ti que no siempre muestras.</p>
+          <p>Ahí entendí que conocer a alguien no es solamente conocer sus momentos felices. También es aprender a mirar con cariño aquello que esa persona suele esconder.</p>
+          <button class="text-btn" data-next="scene-now" type="button">Seguir <span>↓</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 5 -->
+    <section class="scene scene-now" id="scene-now" data-scene="5">
+      <div class="now-content reveal">
+        <span class="chapter-label">05 · AHORA</span>
+        <h2>La versión que confía.</h2>
+        <p>Y ahora estás aquí, mostrándote conmigo de una manera que siento especialmente vulnerable.</p>
+        <p>No sé qué escribirá el siguiente capítulo. No quiero inventarlo. Solo quiero que sepas que esta versión de ti también merece ser apreciada.</p>
+
+        <figure class="now-photo reveal">
+          <img src="assets/anny-ahora.png" alt="Fotografía de Anny" loading="lazy">
+          <figcaption>Este momento también forma parte de la historia.</figcaption>
+        </figure>
+
+        <button class="text-btn" data-next="scene-ending" type="button">Hay algo más <span>↓</span></button>
+      </div>
+    </section>
+
+    <!-- SCENE 6 -->
+    <section class="scene scene-ending" id="scene-ending" data-scene="6">
+      <div class="ending-content reveal">
+        <div class="ending-symbol">♡</div>
+        <p class="ending-small">Y SI ALGÚN DÍA OLVIDAS</p>
+        <h2>Lo que quiero que recuerdes.</h2>
+        <p>Que no tienes que ser una versión perfecta de ti para ser querida. Todas tus fases, incluso las que todavía no conozco, forman parte de la persona que admiro.</p>
+        <div class="ending-line"></div>
+        <span>— para Anny</span>
+
+        <button class="text-btn restart-btn" data-next="scene-intro" type="button">Volver al principio <span>↺</span></button>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="progress" aria-hidden="true">
+    <span class="progress-dot active"></span>
+    <span class="progress-dot"></span>
+    <span class="progress-dot"></span>
+    <span class="progress-dot"></span>
+    <span class="progress-dot"></span>
+    <span class="progress-dot"></span>
+    <span class="progress-dot"></span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
