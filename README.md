@@ -12,3 +12,19 @@ Carta digital responsive para GitHub Pages.
 - Se añadió un indicador lateral de progreso.
 - Las fotografías se almacenan localmente en `assets/`, por lo que GitHub Pages las puede servir junto al proyecto.
 
+## Publicar en GitHub Pages
+
+1. Crea un repositorio.
+2. Sube `index.html`, `style.css`, `script.js` y la carpeta `assets`.
+3. Ve a `Settings → Pages`.
+4. Selecciona `Deploy from a branch`.
+5. Elige `main` y `/ (root)`.
+6. Guarda y espera a que GitHub publique el sitio.
+
+
+## Fotografía actual
+La escena **Ahora · La versión que confía** utiliza `assets/anny-ahora.png`.
+
+
+## v5 — corrección móvil
+Se corrigió la visibilidad de la carta en pantallas pequeñas. La carta ya no depende de que su sección completa entre en el viewport para mostrarse, y el contenedor tiene ancho y espaciado seguros para móviles.
