@@ -1,6 +1,6 @@
-# Para Anny ♡ — Dark Romance v3
+# Para Isabela ♡ — Dark Romance v3
 
-Carta digital responsive para GitHub Pages.
+Carta digital responsive para GitHub Pages, creada especialmente para Isabela.
 
 ## Qué cambió en v3
 
@@ -23,7 +23,7 @@ Carta digital responsive para GitHub Pages.
 
 
 ## Fotografía actual
-La escena **Ahora · La versión que confía** utiliza `assets/anny-ahora.png`.
+La escena **Ahora · La versión que confía** utiliza `assets/isabela-ahora.png`.
 
 
 ## v5 — corrección móvil
